@@ -16,17 +16,17 @@
 #The following are required.  Insert the Alibaba Access Key and Secret Key below
 #################################################################################
 variable "access_key" {
-    default = "LTAIzclqjaUrQz0J"
+    default = "Insert-Access-Key"
 }
 
 variable "secret_key" {
-    default = "BRQ5TB6paNWxY7I1HOZwQzNytFRoLs"
+    default = "Insert-Secret-Key"
 }
 
 # Prisma Access Service IP - This is defined in Prisma Access
 #################################################################################
 variable "prisma-access-remote-ip" {
-    default = "137.83.224.245"
+    default = "Insert-Prisma_Access-Service-IP-Address"
 }
 #This is the Variables for the R1 region, which is the region the VM-Series is deployed in.
 #################################################################################
