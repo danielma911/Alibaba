@@ -16,10 +16,10 @@
 #################################################################################
 
 variable "access_key" {
-    default = "LTAIzclqjaUrQz0J"
+    default = "Insert Alibaba Access key here"
 }
 variable "secret_key" {
-    default = "BRQ5TB6paNWxY7I1HOZwQzNytFRoLs"
+    default = "Insert Alibaba Secret key here"
 }
 # The following variables are the key names that are created.  If these names are changed,
 # be sure to change the key names in the variables.tf of infastructure deployment Terraform.
