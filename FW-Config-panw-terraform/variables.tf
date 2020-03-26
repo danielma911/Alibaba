@@ -16,11 +16,11 @@
 # Configure the Alicloud Provider for R1 region
 ####################################
 variable "access_key" {
-    default = "LTAIzclqjaUrQz0J"
+    default = "Insert Alibaba Access Key here"
 }
 
 variable "secret_key" {
-    default = "BRQ5TB6paNWxY7I1HOZwQzNytFRoLs"
+    default = "Insert Alibaba Secret Key here"
 }
 
 variable "r1-region" {
@@ -71,7 +71,7 @@ variable "IKE-Gateway-Japan-peer-address" {
     default = "192.168.10.10"     
 }
 variable "ike-gateway-pre_shared_key" {
-    default = "12345678"
+    default = "Insert IKE Preshared key"
 }
 
 #Route to Japan Variables
