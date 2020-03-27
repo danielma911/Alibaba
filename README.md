@@ -28,19 +28,27 @@ This is an optional step.  If keys are already created in the desired deployment
 
 ### 2. Deploy the infrastructure and VM-Series
 The scripts to deploy the infrastructure is located in the following directory:
-[**Prisma-Access-Mobile-Users-China**](https://github.com/djspears/Alibaba/tree/master/Prisma-Access-Mobile-Users-China) There will be modifications needed to the [**variables.tf**](https://github.com/djspears/Alibaba/blob/master/Prisma-Access-Mobile-Users-China/variables.tf) file.  Specifically the addition of the keys and Primsa Access Service IP must be updated and other variables can be changed to accomodate specific deployments. 
+[**Prisma-Access-Mobile-Users-China**](https://github.com/djspears/Alibaba/tree/master/Prisma-Access-Mobile-Users-China) There will be modifications needed to the [**variables.tf**](https://github.com/djspears/Alibaba/blob/master/Prisma-Access-Mobile-Users-China/variables.tf) file.  Specifically the addition of the keys and Primsa Access Service IP must be updated and other variables can be changed to accomodate specific deployments. Below is a list of variables in the file:
 <p align="center">
-  <b>Variables.tf file</b>
 <img src="https://user-images.githubusercontent.com/21991161/77773047-10678580-7017-11ea-9341-956cb561a3de.jpg" width="75%" height="100%" >
 </p>
 
+After the deployment there terraform output should look similiar to this:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/21991161/77763935-d5ab2080-7009-11ea-930a-8bf401277b10.jpg" width="75%" height="75%" >
+</p>
 
+The MGMT IP can be used to access the firewall.  THe default username/password is admin/admin.  Please change that.  
+### IMPORTANT
+Terraform does not currently support inserting an EIP as a Secondary address to an ECS. THe Script creates an EIP that can be attached to the Untrust interface of the VM-Series.  This set must be done manually if there is a need for traffic to be directed to the internet directly from the VM-Series.
 
 ### 3. Deploy Build
-```
-$ terraform init
-$ terraform apply
-```
+
+
+<p align="center">
+<b>Insert Access and Secret Keys and adjust regions as desired.</b>
+<img src="https://user-images.githubusercontent.com/21991161/77771733-1492a380-7015-11ea-8aa5-cea22062d585.jpg" width="75%" height="75%" >
+</p>
 
 </br>
 
