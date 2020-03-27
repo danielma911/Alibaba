@@ -1,9 +1,8 @@
 # Alibaba China Prisma Access Service deployment
 
 
-Terraform creates 2 VM-Series firewalls that secure ingress/egress traffic from spoke VPCs.  The spoke VPCs are connected (via VPC Peering) to the VM-Series trust VPC. All TCP/UDP traffic originating from the spokes is routed to internal load balancers in the trust VPC.
+This repository contains 3 seperate terraform scripts with the goal of automating the deoployment of a VM-Series firewall as a Prisma Access Service Connection in Alibaba.  It also leverages an Express Connect tunnel to facilitate the connectivity to another region that has access to the Prisma Access Cloud Service.  Below is an overview of the deployment:
 
-Please see the [**Deployment Guide**](https://github.com/wwce/terraform/blob/master/gcp/adv_peering_2fw_2spoke_common/GUIDE.pdf) for more information.
 
 </br>
 <p align="center">
@@ -12,14 +11,14 @@ Please see the [**Deployment Guide**](https://github.com/wwce/terraform/blob/mas
 
 
 ## Prerequistes 
-* Valid GCP Account with existing project
-* Access to GCP Cloud Terminal or to a machine with a Terraform 12 installation
+* Familiarity with Terraform.  
+* Alibaba credentials and console access
 
 </br>
 
 ## How to Deploy
-### 1. Setup & Download Build
-In your project, open GCP Cloud Terminal and run the following.
+### 1. Create keys 
+This is an optional step.  If keys are already created in the desired deployment regions they can be reused.  The script to create keys is located in the [**Create-Alibaba-ECS-keys**](https://https://github.com/djspears/Alibaba/tree/master/Create-Alibaba-ECS-keys) directory.
 ```
 $ gcloud services enable compute.googleapis.com
 $ ssh-keygen -f ~/.ssh/gcp-demo -t rsa -C gcp-demo
@@ -52,6 +51,9 @@ Run the following to destroy the build and remove the SSH key created in step 1.
 $ terraform destroy
 $ rm ~/.ssh/gcp-demo*
 ```
+
+For more specific Please see the [**Deployment Guide**](https://github.com/wwce/terraform/blob/master/gcp/adv_peering_2fw_2spoke_common/GUIDE.pdf) for more information.
+
 
 </br>
 
