@@ -38,7 +38,7 @@ After the deployment there terraform output should look similiar to this:
 <img src="https://user-images.githubusercontent.com/21991161/77763935-d5ab2080-7009-11ea-930a-8bf401277b10.jpg" width="75%" height="75%" >
 </p>
 
-The MGMT IP can be used to access the firewall.  THe default username/password is admin/admin.  Please change that.  
+The MGMT IP can be used to access the firewall.  The default username/password is admin/admin.  Please change that.  
 </br>
 ### IMPORTANT
 Terraform does not currently support inserting an EIP as a Secondary address to an ECS. THe Script creates an EIP that can be attached to the Untrust interface of the VM-Series.  This set must be done manually if there is a need for traffic to be directed to the internet directly from the VM-Series.
