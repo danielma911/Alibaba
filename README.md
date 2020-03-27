@@ -42,28 +42,19 @@ The MGMT IP can be used to access the firewall.  THe default username/password i
 ### IMPORTANT
 Terraform does not currently support inserting an EIP as a Secondary address to an ECS. THe Script creates an EIP that can be attached to the Untrust interface of the VM-Series.  This set must be done manually if there is a need for traffic to be directed to the internet directly from the VM-Series.
 
-### 3. Deploy Build
-
+### 3. Configure the VM-Series
+There is a third Terraform script that leverages the PANW Terraform Provider for configuring the VM-Series Firewall. That is located in the [**FW-Config-panw-terraform**](https://github.com/djspears/Alibaba/tree/master/FW-Config-panw-terraform) directory. This will connect to the VM-Series and configure the IPSec connection to Prisma Access.  The variables file will need to be modified.
 
 <p align="center">
-<b>Insert Access and Secret Keys and adjust regions as desired.</b>
-<img src="https://user-images.githubusercontent.com/21991161/77771733-1492a380-7015-11ea-8aa5-cea22062d585.jpg" width="75%" height="75%" >
+<b>Insert Add the Alibaba key information.</b>
+<img src="https://user-images.githubusercontent.com/21991161/77782004-8f16ef80-7024-11ea-8038-e2cd0aac5f41.jpg" width="75%" height="75%" >
 </p>
-
+### Note
+This Terraform configure is getting the firewall address via a terraform data call.  If there are other resources in the region, this may fail and the Firewall MGMT address will need to be added to the variables file.
 </br>
-
-## How to Destroy
-Run the following to destroy the build and remove the SSH key created in step 1.
-```
-$ terraform destroy
-$ rm ~/.ssh/gcp-demo*
-```
-
-For more specific Please see the [**Deployment Guide**](https://github.com/wwce/terraform/blob/master/gcp/adv_peering_2fw_2spoke_common/GUIDE.pdf) for more information.
-
-
-</br>
-
+<b>A successful deployment of this will result in an output similiar to this.</b>
+<img src="https://user-images.githubusercontent.com/21991161/77763934-d5128a00-7009-11ea-9ca0-6630e6da0ae2.jpg" width="75%" height="75%" >
+</p>
 ## Support Policy
 The guide in this directory and accompanied files are released under an as-is, best effort, support policy. These scripts should be seen as community supported and Palo Alto Networks will contribute our expertise as and when possible. We do not provide technical support or help in using or troubleshooting the components of the project through our normal support options such as Palo Alto Networks support teams, or ASC (Authorized Support Centers) partners and backline support options. The underlying product used (the VM-Series firewall) by the scripts or templates are still supported, but the support is only for the product functionality and not for help in deploying or using the template or script itself.
 Unless explicitly tagged, all projects or work posted in our GitHub repository (at https://github.com/PaloAltoNetworks) or sites other than our official Downloads page on https://support.paloaltonetworks.com are provided under the best effort policy.
