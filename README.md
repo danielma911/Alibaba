@@ -51,13 +51,15 @@ There is a third Terraform script that leverages the PANW Terraform Provider for
 <img src="https://user-images.githubusercontent.com/21991161/77782004-8f16ef80-7024-11ea-8038-e2cd0aac5f41.jpg" width="75%" height="75%" >
 </p>
 </br>
-### Note
+
+### NOTE
 This Terraform configure is getting the firewall address via a terraform data call.  If there are other resources in the region, this may fail and the Firewall MGMT address will need to be added to the variables file.
 </br>
 <b>A successful deployment of this will result in an output similiar to this.</b>
 <img src="https://user-images.githubusercontent.com/21991161/77763934-d5128a00-7009-11ea-9ca0-6630e6da0ae2.jpg" width="75%" height="75%" >
 </p>
 </br>
+
 ## Support Policy
 The guide in this directory and accompanied files are released under an as-is, best effort, support policy. These scripts should be seen as community supported and Palo Alto Networks will contribute our expertise as and when possible. We do not provide technical support or help in using or troubleshooting the components of the project through our normal support options such as Palo Alto Networks support teams, or ASC (Authorized Support Centers) partners and backline support options. The underlying product used (the VM-Series firewall) by the scripts or templates are still supported, but the support is only for the product functionality and not for help in deploying or using the template or script itself.
 Unless explicitly tagged, all projects or work posted in our GitHub repository (at https://github.com/PaloAltoNetworks) or sites other than our official Downloads page on https://support.paloaltonetworks.com are provided under the best effort policy.
