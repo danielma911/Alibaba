@@ -19,12 +19,11 @@ This repository contains 3 seperate terraform scripts with the goal of automatin
 ## How to Deploy
 ### 1. Create keys 
 This is an optional step.  If keys are already created in the desired deployment regions they can be reused.  The script to create keys is located in the [**Create-Alibaba-ECS-keys**](https://github.com/djspears/Alibaba/tree/master/Create-Alibaba-ECS-keys) directory.
-```
-</br>
+
 <p align="center">
-<img src="https://user-images.githubusercontent.com/21991161/77771733-1492a380-7015-11ea-8aa5-cea22062d585.jpg">
+<b>Insert Access and Secret Keys and adjust regions as desired.</b>
+<img src="https://user-images.githubusercontent.com/21991161/77771733-1492a380-7015-11ea-8aa5-cea22062d585.jpg" width="75%" height="75%" >
 </p>
-```
 
 ### 2. Edit terraform.tfvars
 Open terraform.tfvars and edit variables (lines 1-4) to match your Project ID, SSH Key (from step 1), and VM-Series type.
@@ -35,7 +34,7 @@ $ vi terraform.tfvars
 
 <p align="center">
 <b>Your terraform.tfvars should look like this before proceeding</b>
-<img src="https://raw.githubusercontent.com/wwce/terraform/master/gcp/adv_peering_2fw_2spoke_common/images/tfvars.png" width="75%" height="75%" >
+<img src="https://user-images.githubusercontent.com/21991161/77771733-1492a380-7015-11ea-8aa5-cea22062d585.jpg" width="75%" height="75%" >
 </p>
 
 ### 3. Deploy Build
