@@ -20,9 +20,10 @@ This repository contains 3 seperate terraform scripts with the goal of automatin
 ### 1. Create keys 
 This is an optional step.  If keys are already created in the desired deployment regions they can be reused.  The script to create keys is located in the [**Create-Alibaba-ECS-keys**](https://github.com/djspears/Alibaba/tree/master/Create-Alibaba-ECS-keys) directory.
 ```
-$ gcloud services enable compute.googleapis.com
-$ ssh-keygen -f ~/.ssh/gcp-demo -t rsa -C gcp-demo
-$ git clone https://github.com/wwce/terraform; cd terraform/gcp/adv_peering_2fw_2spoke_common
+</br>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/21991161/77771733-1492a380-7015-11ea-8aa5-cea22062d585.jpg">
+</p>
 ```
 
 ### 2. Edit terraform.tfvars
