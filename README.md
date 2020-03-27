@@ -13,24 +13,27 @@ This repository contains 3 seperate terraform scripts with the goal of automatin
 ## Prerequistes 
 * Familiarity with Terraform.  
 * Alibaba credentials and console access
+* Download or clone this repo
 
 </br>
 
 ## How to Deploy
 ### 1. Create keys 
-This is an optional step.  If keys are already created in the desired deployment regions they can be reused.  The script to create keys is located in the [**Create-Alibaba-ECS-keys**](https://github.com/djspears/Alibaba/tree/master/Create-Alibaba-ECS-keys) directory.
+This is an optional step.  If keys are already created in the desired deployment regions they can be reused.  The script to create keys is located in the [**Create-Alibaba-ECS-keys**](https://github.com/djspears/Alibaba/tree/master/Create-Alibaba-ECS-keys) directory.  After modifying the variables section perform a Terraform Init, Plan, and Apply.
 
 <p align="center">
 <b>Insert Access and Secret Keys and adjust regions as desired.</b>
 <img src="https://user-images.githubusercontent.com/21991161/77771733-1492a380-7015-11ea-8aa5-cea22062d585.jpg" width="75%" height="75%" >
 </p>
 
-### 2. Edit terraform.tfvars
-Open terraform.tfvars and edit variables (lines 1-4) to match your Project ID, SSH Key (from step 1), and VM-Series type.
+### 2. Deploy the infrastructure and VM-Series
+The scripts to deploy the infrastructure is located in the following directory:
+[**Prisma-Access-Mobile-Users-China**](https://github.com/djspears/Alibaba/tree/master/Prisma-Access-Mobile-Users-China) There will be modifications needed to the [**variables.tf**](https://github.com/djspears/Alibaba/blob/master/Prisma-Access-Mobile-Users-China/variables.tf) file.  Specifically the addition of the keys and Primsa Access Service IP must be updated and other variables can be changed to accomodate specific deployments.
+<p align="center">
+<b>Variables.tf file:</b>
+<img src="https://user-images.githubusercontent.com/21991161/77773047-10678580-7017-11ea-9341-956cb561a3de.jpg" width="75%" height="100%" >
+</p>
 
-```
-$ vi terraform.tfvars
-```
 
 <p align="center">
 <b>Your terraform.tfvars should look like this before proceeding</b>
