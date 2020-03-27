@@ -50,11 +50,12 @@ There is a third Terraform script that leverages the PANW Terraform Provider for
 <b>Insert Add the Alibaba key information.</b>
 <img src="https://user-images.githubusercontent.com/21991161/77782004-8f16ef80-7024-11ea-8038-e2cd0aac5f41.jpg" width="75%" height="75%" >
 </p>
-</br>
+
 
 ### NOTE
 This Terraform configure is getting the firewall address via a terraform data call.  If there are other resources in the region, this may fail and the Firewall MGMT address will need to be added to the variables file.
 </br>
+
 <b>A successful deployment of this will result in an output similiar to this.</b>
 <img src="https://user-images.githubusercontent.com/21991161/77763934-d5128a00-7009-11ea-9ca0-6630e6da0ae2.jpg" width="75%" height="75%" >
 </p>
