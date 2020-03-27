@@ -28,17 +28,13 @@ This is an optional step.  If keys are already created in the desired deployment
 
 ### 2. Deploy the infrastructure and VM-Series
 The scripts to deploy the infrastructure is located in the following directory:
-[**Prisma-Access-Mobile-Users-China**](https://github.com/djspears/Alibaba/tree/master/Prisma-Access-Mobile-Users-China) There will be modifications needed to the [**variables.tf**](https://github.com/djspears/Alibaba/blob/master/Prisma-Access-Mobile-Users-China/variables.tf) file.  Specifically the addition of the keys and Primsa Access Service IP must be updated and other variables can be changed to accomodate specific deployments.
+[**Prisma-Access-Mobile-Users-China**](https://github.com/djspears/Alibaba/tree/master/Prisma-Access-Mobile-Users-China) There will be modifications needed to the [**variables.tf**](https://github.com/djspears/Alibaba/blob/master/Prisma-Access-Mobile-Users-China/variables.tf) file.  Specifically the addition of the keys and Primsa Access Service IP must be updated and other variables can be changed to accomodate specific deployments. 
 <p align="center">
-<b>Variables.tf file:</b>
+  <b>Variables.tf file</b>
 <img src="https://user-images.githubusercontent.com/21991161/77773047-10678580-7017-11ea-9341-956cb561a3de.jpg" width="75%" height="100%" >
 </p>
 
 
-<p align="center">
-<b>Your terraform.tfvars should look like this before proceeding</b>
-<img src="https://user-images.githubusercontent.com/21991161/77771733-1492a380-7015-11ea-8aa5-cea22062d585.jpg" width="75%" height="75%" >
-</p>
 
 ### 3. Deploy Build
 ```
