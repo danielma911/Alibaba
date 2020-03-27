@@ -18,7 +18,7 @@ This repository contains 3 seperate terraform scripts with the goal of automatin
 
 ## How to Deploy
 ### 1. Create keys 
-This is an optional step.  If keys are already created in the desired deployment regions they can be reused.  The script to create keys is located in the [**Create-Alibaba-ECS-keys**](https://https://github.com/djspears/Alibaba/tree/master/Create-Alibaba-ECS-keys) directory.
+This is an optional step.  If keys are already created in the desired deployment regions they can be reused.  The script to create keys is located in the [**Create-Alibaba-ECS-keys**](https://github.com/djspears/Alibaba/tree/master/Create-Alibaba-ECS-keys) directory.
 ```
 $ gcloud services enable compute.googleapis.com
 $ ssh-keygen -f ~/.ssh/gcp-demo -t rsa -C gcp-demo
